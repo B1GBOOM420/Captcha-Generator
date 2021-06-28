@@ -1,0 +1,16 @@
+{
+  "name": "captcha-roller",
+  "version": "1.0.0",
+  "description": "This bot rapidly generates png images, and logs the names of the captchas to a JS file.",
+  "main": "app.js",
+  "keywords": [],
+  "author": "B1GBOOM",
+  "license": "ISC",
+  "dependencies": {
+    "@jimp/plugin-circle": "^0.16.1",
+    "@jimp/plugin-fisheye": "^0.16.1",
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "jimp": "^0.16.1"
+  }
+}
