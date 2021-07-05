@@ -25,6 +25,9 @@ For env...
 ```sh
 Create .env file
 DURATION=Your-Duration-Here
+save
+
+node .      //to run it
 ```
 
 ### Feel free to make Pull requests!!!

@@ -11,6 +11,7 @@
     "@jimp/plugin-fisheye": "^0.16.1",
     "colors": "^1.4.0",
     "dotenv": "^10.0.0",
-    "jimp": "^0.16.1"
+    "jimp": "^0.16.1",
+    "progress": "github:visionmedia/node-progress"
   }
 }

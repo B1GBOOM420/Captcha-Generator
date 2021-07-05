@@ -24,10 +24,14 @@ function randomString(len, charSet) {
   return randomString;
 }
 
-module.exports = async function createCaptcha(date) {
+module.exports = async function createCaptcha(date, adjustedTime) {
+
   const captcha = randomString(6, "ABCDEFGHJKLMNorstuvwxz023456789");
   const image = new Jimp(520, 140, "black");
-  const font = await Jimp.loadFont(Jimp.FONT_SANS_128_WHITE);
+  // const font = await Jimp.loadFont('core/customs/moonRising/Moonrising.fnt')
+  // const font = await Jimp.loadFont('core/customs/hemi/Hemi.fnt')
+  const font = await Jimp.loadFont('core/customs/white/White.fnt')
+
   const w = image.bitmap.width;
   const h = image.bitmap.height;
   const textWidth = Jimp.measureText(font, captcha);
@@ -37,8 +41,8 @@ module.exports = async function createCaptcha(date) {
   image.fisheye({ r: 1.05 });
   image.blur(1);
   const data = `"${captcha}", `;
-  await image.write(`src/captchas-${date}/${captcha}.png`);
-  await fs.appendFile(`src/captchas-${date}/sheet-${date}.js`, data, () => {});
+  await image.write(`generated/${date}/Time-${adjustedTime}/Images/${captcha}.png`);
+  await fs.appendFile(`generated/${date}/Time-${adjustedTime}/${date}-${adjustedTime}.js`, data, () => {});
 
   return captcha;
 };
