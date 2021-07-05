@@ -2,7 +2,7 @@
 ---
 ## _Create custom Captcha, and log the names into a file_
 
-![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen) ![Version](https://img.shields.io/badge/Version-1.0.0-blue)
+![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen) ![Version](https://img.shields.io/badge/Version-1.5.0-blue)
 
 ## Features
 - Cusomtizable in length and string content
